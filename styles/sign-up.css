@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.sign-up-container{
+    width: 400px;
+    height: 550px; 
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.sign-up-header{
+    width: 400px;
+    background:#1EBEB6;
+    height: 25%;
+    color: #fff;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.212) 0px 5px 8px;
+   
+    
+}
+
+.sign-up-header h3{
+    margin-top: 40px;
+    font-size: 28px;
+}
+.sign-up-header p{
+    font-size: 19px;
+}
+
+.sign-up-body{
+    color: #81CFCF;
+}
+
+.row1{
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.sign-up-body .row1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row1 h3{
+    font-size: 18px;
+    font-weight: 100;
+    margin-left: 15%;
+    color: #1EBEB6;
+   
+}
+
+.social-media-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15%;
+}
+
+.social-media-icons .facebook{
+    width: 25px;
+    height: 25px;
+
+}
+
+.social-media-icons .twitter{
+    width: 35px;
+    height: 35px;
+}
+
+.row2, .row3, .row5{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.row2 input{
+    width: 290px;
+    padding: 12px 20px;
+    border: 1px solid #1EBEB6;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+.row2 input::placeholder{
+    color: #B9BBC2;
+    font-size: 16px;
+}
+
+
+.row3 button{
+    font-size: 18px;
+    /* font-weight: 100; */
+    background: #1EBEB6;
+    color: #fff;
+    border: none;
+    width: 200px;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.row4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.row4 p{
+    color: #1EBEB6;
+    font-size: 11px;
+}
+
+.row4 a{
+    color: #1EBEB6;
+    font-weight: bold;
+}
+
+.row4 .terms-services{
+    display: flex;
+    align-items: center;
+    margin-left: 15%;
+    
+}
+
+.row4 .terms-services .check{
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+   
+    
+   
+}
+.check:checked{
+    background-color: #1EBEB6;
+    
+}
+
+.row4 .forgotPass{
+    margin-right: 15%;
+    color: #B9BBC2;
+}
+
+.row5{
+    margin-top: 15px;
+}
+.row5 p{
+    color: #B9BBC2;
+
+}
+.row5 a{
+    color:#1EBEB6;
+    text-decoration: none;
+    font-size: 12px;
+    
+}
+
+.row5 a:hover{
+    text-decoration: underline;
+    
+}
