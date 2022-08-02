@@ -74,6 +74,22 @@ nav{
 
 }
 
+.employee-table table{
+    width: 100%;
+    color: #1EBEB6;
+}
+
+.employee-table table th, td{
+    text-align: center;
+    padding: 10px 30px;
+    border: none;
+}
+
+thead tr:nth-child(odd), tbody tr:nth-child(even) {
+    background: rgba(30, 190, 182, 0.2);
+   
+}
+
 .employee-table .header{
 
     background: #1EBEB6;
@@ -104,3 +120,4 @@ nav{
     background: rgba(30, 190, 182, 0.2);
     cursor: pointer;
 }
+
