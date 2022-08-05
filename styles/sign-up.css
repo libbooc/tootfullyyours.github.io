@@ -74,12 +74,14 @@
 .social-media-icons .facebook{
     width: 25px;
     height: 25px;
+    cursor: pointer;
 
 }
 
 .social-media-icons .twitter{
     width: 35px;
     height: 35px;
+    cursor: pointer;
 }
 
 .row2, .row3, .row5{
