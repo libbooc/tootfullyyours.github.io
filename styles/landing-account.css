@@ -39,16 +39,20 @@ nav{
 }
 
 .right-nav ul li a{
+    position: relative;
     text-decoration: none;
     color: white;
 
 }
 
+
 .left-nav a{
     color: #fff;
-    margin: 0 30px;
+    margin: 0 10px;
+    text-decoration: none;
+    cursor: default;
 }
-.loginBtn{
+.logoutBtn{
     font-size: 15px;
     padding: 8px 20px;
     width: 140px;
