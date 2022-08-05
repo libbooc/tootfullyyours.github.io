@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1EBEB6;
+    z-index: 1;
+ 
+}
+
+.right-nav{
+    text-align: left;
+}
+
+.right-nav ul{
+    margin-left: 30px;
+}
+
+.right-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin:  0 20px;
+}
+
+.right-nav ul li a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+
+}
+
+
+.left-nav a{
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    cursor: default;
+}
+.logoutBtn{
+    font-size: 15px;
+    padding: 8px 20px;
+    width: 140px;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: #1EBEB6;
+    color: #fff;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.appointment-body{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.left-appointment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: auto;
+
+}
+.left-appointment img{
+    width: 650px;
+    height: 650px;
+    
+}
+
+.right-appointment{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    color: #1EBEB6;
+    text-align: center;
+}
+
+.right-appointment p{
+    margin-top: 20px;
+    color: #81CFCF;
+}
+
+
+.img-date-containter{
+    width: 50%;
+    background: #fff;
+    text-align: center;
+    border-radius: 40px;
+    box-shadow: rgba(0, 0, 0, 0.212) 0px 5px 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr;
+    grid-template-areas: "header header"
+                         "img1 date"
+                         "img2 time"
+                         "img3 doctor";
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+
+}
+
+.img-date-containter nav{
+    grid-area: header;
+    background: #1EBEB6;
+    color: #fff;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.212) 0px 5px 8px;
+}
+
+.date, .time, .doctor{
+    text-align: start;
+}
+
+.date{
+    grid-area: date;
+   
+}
+
+.time{
+    grid-area: time;
+}
+
+.doctor{
+    grid-area: doctor;
+}
+
+.date-icon{
+    grid-area: img1;
+}
+
+.time-icon{
+    grid-area: img2;
+}
+ 
+.doctor-icon{
+    grid-area: img3;
+    margin-bottom: 15px;
+}
