@@ -1,0 +1,49 @@
+
+ 
+ <!-- form handling-->
+ <form action="/api/appointment" method="POST" id="add_appointment">
+    <div class="new_appointment">
+        <div class="form-group">
+            <label for="pID" class="text-light">Patient ID</label>
+            <input type="hidden" name="id" value="">
+            <input type="number" name="pID" value="">
+        </div>
+        <div class="form-group">
+            <label for="aID" class="text-light">Appoitnment ID</label>
+            <input type="number" name="aID" value="">
+        </div>
+        <div  class="form-group">
+            <label for="fname" class="text-light">First Name </label>
+            <input type="text" name="fname" value="">
+        </div>
+        <div  class="form-group">
+            <label for="lname" class="text-light">Last Name </label>
+            <input type="text" name="lname" value="">
+        </div>
+        <div  class="form-group">
+            <label for="mname" class="text-light">Middle Name </label>
+            <input type="text" name="mname" value="">
+        </div>
+        <div  class="form-group">
+            <label for="adate" class="text-light">Appointment Date</label>
+            <input type="date" name="adate" placeholder="dd-mm-yyyy" value="">
+        </div>
+        <div  class="form-group">
+            <label for="atime" class="text-light">Appoitnment Time </label>
+            <input type="time" name="atime" placeholder="hh:mm pm/am" value="">   
+        </div>
+        <div  class="form-group">
+            <label for="procedure" class="text-light">Procedure </label>
+            <input type="text" name="procedure" value="">   
+        </div>
+        <div  class="form-group">
+            <label for="p_cnum" class="text-light">Contact Number </label>
+            <input type="number" name="p_cnum" value="">
+        </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+    </div>
+    
+</form>

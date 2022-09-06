@@ -1,0 +1,19 @@
+<% for(var i =0; i < appointment.length; i++){%>
+<tr>
+    <td><%= i + 1%></td>
+    <td><%=appointment[i].pID %></td>
+    <td><%=appointment[i].fname + " " + appointment[i].mname + " " + appointment[i].lname %></td>
+    <td><%=appointment[i].adate %></td>
+    <td><%=appointment[i].atime %></td>
+    <td><%=appointment[i].procedure %></td>
+    <td><%=appointment[i].p_cnum %></td>
+<td>
+    <a href="/update-appointment?id=<%=appointment[i]._id%>" class="btn border-shadow update">
+        <span class="text-gradient"><i class="fas fa-pencil"></i></span>
+    </a>
+    <a class="btn border-shadow delete" data-id="<%=appointment[i]._id%>">
+        <span class="text-gradient"><i class="fas fa-times"></i></span>
+    </a>
+</td>
+</tr>
+<% } %>

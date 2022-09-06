@@ -1,0 +1,80 @@
+
+<!-- include header -->
+<%-include('include/_header')%>
+<!-- include header -->
+
+
+
+    <!-- Main Site --> 
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                <a href="/"><i class="fas fa-angle-double-left"></i>All Appointment</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Appointment</h2>
+            <span class="text-light">Use the below form to update an account</span>
+        </div>
+    
+        <!-- Add appointment form-->
+        <!-- form handling-->
+ <form method="POST" id="update_appointment">
+    <div class="new_appointment">
+        <div class="form-group">
+            <label for="pID" class="text-light">Patient ID</label>
+            <input type="hidden" name="id" value="<%=appointment._id%>">
+            <input type="text" name="pID" value="<%=appointment.pID%>">
+        </div>
+        <div class="form-group">
+            <label for="aID" class="text-light">Appoitnment ID</label>
+            <input type="text" name="aID" value="<%=appointment.aID%>" disabled>
+        </div>
+        <div  class="form-group">
+            <label for="fname" class="text-light">First Name </label>
+            <input type="text" name="fname" value="<%=appointment.fname%>">
+        </div>
+        <div  class="form-group">
+            <label for="lname" class="text-light">Last Name </label>
+            <input type="text" name="lname" value="<%=appointment.lname%>">
+        </div>
+        <div  class="form-group">
+            <label for="mname" class="text-light">Middle Name </label>
+            <input type="text" name="mname" value="<%=appointment.mname%>">
+        </div>
+        <div  class="form-group">
+            <label for="adate" class="text-light">Appointment Date</label>
+            <input type="date" name="adate" value="<%=appointment.adate%>">
+        </div>
+        <div  class="form-group">
+            <label for="atime" class="text-light">Appoitnment Time </label>
+            <input type="time" name="atime" value="<%=appointment.atime%>">   
+        </div>
+         <div  class="form-group">
+            <label for="procedure" class="text-light">Procedure </label>
+            <input type="text" name="procedure" value="<%=appointment.procedure%>">   
+        </div>
+        <div  class="form-group">
+            <label for="p_cnum" class="text-light">Contact Number </label>
+            <input type="number" name="p_cnum" value="<%=appointment.p_cnum%>">
+        </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+    </div>
+    
+</form>
+
+        </div>
+       </main>
+        
+        <!-- Main Site --> 
+    
+
+
+<!-- include footer -->
+<%-include('include/_footer')%>
+<!-- include footer --> 
