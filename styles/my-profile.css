@@ -8,6 +8,7 @@
     --dark-color: #1C8D88;
     --gray: #C5C5C5;
     --light-gray: #D0D0D0;
+    --scroll-bar-track: #E5EDED;
 }
 
 
@@ -207,13 +208,18 @@ nav ul li a:hover:after{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
 }
 
 .table-picker:hover{
     background-color: var(--dark-color);
- 
 }
+.table-picker:active{
+    background-color: var(--dark-color);
+}
+
+
 
 .table-picker img{
     width: 60px;
@@ -232,6 +238,7 @@ nav ul li a:hover:after{
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
+    overflow: scroll;
 }
 
 #appointment-history th {
@@ -239,17 +246,46 @@ nav ul li a:hover:after{
     color: var(--white);
     font-weight: 400;
     padding: 1rem;
+    
 }
 
 #appointment-history td{
     padding: 1rem;
     text-align: center;
+
 }
 
 #appointment-history tr:hover{
     background-color: var(--bg-color);
 }
+.my-custom-scrollbar {
+    position: relative;
+    overflow: auto;
+    height: 60vh;
+}
 
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--gray); 
+    border-radius: 10px;
+    background-color: var(--scroll-bar-track);
+  }
+ 
+::-webkit-scrollbar-thumb {
+    background: var(--bg-header); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-color); 
+}
 @media only screen and (max-width: 1059px){
         .table-header-container{
             flex-direction: column;
@@ -299,3 +335,39 @@ nav ul li a:hover:after{
         padding: 0.2rem;
     }
 }
+
+.medical-input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1.2rem 0;
+}
+.question{
+    font-weight:600;
+    color: var(--bg-header);
+    margin: 1rem 0;
+}
+
+.answer{
+    width: 45%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+.answer:focus {
+    outline: none !important;
+    border: none;
+    box-shadow: 0 0 10px var(--bg-header);
+  }
+
+::-webkit-input-placeholder .answer{ 
+    opacity: 0.4;
+  }
+
