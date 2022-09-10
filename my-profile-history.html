@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/my-profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+    <title>my Profile</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">My Profile</a></li>
+                <li><a href="">Appointment</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <li><a href="">(+639) 12 345 6789</a></li>
+                <li><button class="logout-btn">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container"> 
+        <div class="col">
+            <div class="row-1">
+                <div class="patient-photo"><img src="images/edit 1.png"></div>
+                <div class="patient-profile">
+                    <h2 class="name">JUAN DELA CRUZ</h2>
+                    <p class="email">E-mail: </p>
+                    <p class="phone-num">Phone: </p>
+                </div>
+            </div>
+            <div class="row-2">
+                <h3 class="basic-info">Basic Information</h3>
+                <div class="information">
+                    <p class="info">Birth Date: </p>
+                    <p class="info">Age: </p>
+                    <p class="info">Gender: </p>
+                    <p class="info">Nationality: </p>
+                    <p class="info">Home Address: </p>
+                    <p class="info">Emergency Contact Number: </p>
+                    <p class="info">Emergency Contact Relationship: </p>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="table-container">
+                <div class="table-header-container">
+                    <div class="table-picker" onclick="location.href = 'my-profile-medical.html'">
+                        <img class="picker-icon" src="images/history 2.png">
+                        <h3 class="picker-name">Medical History</h3>
+                    </div>
+                    <div class="table-picker" onclick="location.href = 'my-profile-history.html'">
+                        <img class="picker-icon" src="images/appointment 2.png">
+                        <h3 class="picker-name">Appointment History</h3>
+                    </div>
+                </div>
+            
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                <table id="appointment-history">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Date</th>
+                            <th>Tooth</th>
+                            <th>Services</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                        <tr>
+                            <td>0001</td>
+                            <td>08/08/2002</td>
+                            <td>B1</td>
+                            <td>Extraction</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </div>
+           
+        </div>
+    </main>
+    
+</body>
+</html>
