@@ -250,6 +250,7 @@ nav ul li a:hover:after{
 }
 
 #appointment-history td{
+    color: var(--bg-header);
     padding: 1rem;
     text-align: center;
 
