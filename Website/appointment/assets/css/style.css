@@ -61,6 +61,9 @@ a{
     font-size: 25px;
     
 }
+.text-gradient i:hover{
+    color: rgba(0, 163, 154, 0.6);
+}
 
 
 
@@ -74,6 +77,27 @@ a{
 
 }
 
+/*Scrollbar*/
+
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--gray); 
+
+    background-color: var(--search-barbg);
+  }
+ 
+::-webkit-scrollbar-thumb {
+    background: var(--gray); 
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--navbg); 
+}
 
 
 /* Header */
@@ -383,9 +407,9 @@ input[type=text].search-bar::-webkit-input-placeholder{
 }
 
 #add-appointment th{
-    color: var(--gray);
-    padding-bottom: 1rem;
-   
+    color: var(--containerbg);
+    padding: 1rem 0;
+ 
 }
 
 #add-appointment td{
@@ -403,9 +427,18 @@ input[type=text].search-bar::-webkit-input-placeholder{
 .my-custom-scrollbar {
     position: relative;
     overflow: auto;
-    height: 60vh;
+    height: 50vh;
     background-color: var(--containerbg);
+    table-layout: fixed;
+  
     
+}
+
+.my-custom-scrollbar thead{
+    position: sticky;
+    top: 0;
+    background-color:var(--gray);
+   
 }
 
 .table-wrapper-scroll-y {
@@ -416,4 +449,3 @@ input[type=text].search-bar::-webkit-input-placeholder{
 .transparent{
     background-color: transparent;
 }
-
