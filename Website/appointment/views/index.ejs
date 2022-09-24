@@ -6,15 +6,20 @@
  <!-- Main Site --> 
  <main id="site-main">
     <div class="container">
-        <div class="box-nav d-flex justify-between">
-            <a href="/add-appointment" class="border-shadow">
-                <span class="text-gradient">Add Appointment<i class="fa-solid fa-user"></i></span>
-            </a>
+        <div class="box-nav d-flex justify-between mb-1">
+            
+            <h2 class="text-uppercase text-style">Pending Appointments</h2>
+            <div class="input-icon">
+                <input type="text" class="search-bar" placeholder="Search..." id="search-box" onkeyup="sendData(this)"> 
+                <i class="fa-solid fa-magnifying-glass icon"></i>
+            </div>
+           
+         
         </div>
 
         <!-- form handling-->
-        <form action="/" method="POST">
-            <table class="table">
+        <form class="table-wrapper-scroll-y my-custom-scrollbar" action="/" method="POST">
+            <table id="add-appointment">
                 <thead class="thead-dark">
                     <tr>
                         <th>No</th>
@@ -26,12 +31,21 @@
                         <th>Contact Number</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <%-include('include/_show')%>
-                </tbody>
+
+                    <tbody>
+                        <%-include('include/_show')%>
+                    </tbody>
+               
             </table>
         </form>
-
+    
+        <button class="add-app-btn">
+                <a href="/add-appointment" class=" d-flex al-center">
+                    <i class="fa-solid fa-circle-plus mr-1 pd-1"> </i>
+                    <div class="name-btn text-uppercase ">Add Appointment</div>
+                </a>
+        </button>    
+        
     </div>
    </main>
 <!-- Main Site --> 

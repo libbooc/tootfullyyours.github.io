@@ -25,11 +25,10 @@ $("#update_appointment").submit(function(event){
 
     })
 
-    if(window.location.pathname == "/"){
+if(window.location.pathname == "/"){
         $ondelete = $(".table tbody td a.delete");
         $ondelete.click(function(){
             var id = $(this).attr("data-id")
-
             var request = {
                 "url":`http://localhost:4000/api/appointment/${id}`,
                 "method": "DELETE"

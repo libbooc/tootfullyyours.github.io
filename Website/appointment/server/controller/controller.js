@@ -11,13 +11,6 @@ exports.create = (req,res)=>{
         return;
     }
 
-    // new appointment
-    // function format(adate) {
-    //     var dt = new Date(adate);
-    //     if (!isNaN(dt.getTime())) {
-    //         return dt.getMonth() + 1 + '/' + dt.getDate() + '/' + dt.getFullYear();
-    //     }
-    // }
 
 function timeConvert (atime) {
         atime = atime.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)?$/) || [atime];
