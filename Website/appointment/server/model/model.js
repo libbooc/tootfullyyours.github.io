@@ -29,7 +29,7 @@ var schema = new mongoose.Schema({
         required: true,
     },
     atime:{
-        type: timeConvert(String),
+        type: String,
         required: true,
     },
     procedure:{
