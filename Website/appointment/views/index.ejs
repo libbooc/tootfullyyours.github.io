@@ -20,8 +20,8 @@
         <!-- form handling-->
      
 <form action="/" method="POST">
-    <div class="table-wrapper-scroll-y my-custom-scrollbar"> 
-            <table id="add-appointment">
+    <div class="table-container">
+            <table id="add-appointment" class="fixed_header">
                 <thead class="thead-dark">
                     <tr>
                         <th>No</th>
@@ -37,11 +37,10 @@
                 <tbody id="myTable">
                      <%-include('include/_show')%>
                 </tbody>
-               
             </table>
         </div>
         </form>
-        <div class="d-flex jc-end">
+        <div class="d-flex jc-end white-container pd-2">
         <button class="add-app-btn">
                 <a href="/add-appointment" class=" d-flex al-center">
                     <i class="fa-solid fa-circle-plus mr-1 pd-1"> </i>
