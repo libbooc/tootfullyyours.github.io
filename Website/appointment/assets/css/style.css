@@ -86,18 +86,18 @@ a{
 
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px var(--gray); 
-
-    background-color: var(--search-barbg);
+    background-color: var(--search-barbg  );
+    border-radius: 10px;
   }
  
 ::-webkit-scrollbar-thumb {
-    background: var(--gray); 
+    background: var(--navbg);
+    border-radius: 10px;
+
+
 
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--navbg); 
-}
 
 
 /* Header */
@@ -252,7 +252,7 @@ nav ul li a:hover:after{
 
 /* Form New Appointment*/
 
-form{
+.form-container{
     border-radius: 25px;
     border: none;
     padding: 2rem;
@@ -281,6 +281,7 @@ form{
     display: flex;
     margin: 0 1rem;
     flex-direction: column;
+    
 }
 .form-group input[type=number], .form-group input[type=text],
 .form-group input[type=time], .form-group input[type=date] {
@@ -289,6 +290,7 @@ form{
     border-radius: 10px;
     margin: 0.75rem 0;
     color: var(--color);
+    outline: none;
 
 }
 
@@ -314,9 +316,16 @@ button[type=submit]:hover {
    
 }
 
-.end{
+.jc-end{
+    justify-content: flex-end;
+}
+
+.al-end{
     align-items: flex-end;
 }
+
+
+
 
 .al-center{
     align-items: center;
@@ -335,6 +344,10 @@ input[type=text].search-bar::-webkit-input-placeholder{
     color: var(--gray);
     font-weight: 300;
  
+}
+input[type=text].search-bar{
+    color: var(--color);
+    outline: none;
 }
 
 /* Input Icons */
@@ -377,6 +390,9 @@ input[type=text].search-bar::-webkit-input-placeholder{
 
 .add-app-btn a{
     color: var(--containerbg);
+}
+.add-app-btn a i {
+    font-size: 18px;
 }
 
 /*Table*/
