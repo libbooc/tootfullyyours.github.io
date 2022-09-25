@@ -13,7 +13,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+   
 
 
 }
@@ -75,6 +75,11 @@ a{
 .pd-1{
     padding: 0.2rem;
 
+}
+
+.pd-2{
+    padding-right: 1rem;
+    padding-bottom: 1rem;
 }
 
 /*Scrollbar*/
@@ -374,8 +379,7 @@ input[type=text].search-bar{
 
 
 .add-app-btn{
-    margin-top: 1rem;
-    padding: 0.7rem;
+    padding: 0.6rem;
     border: 1px solid var(--containerbg);
     background-color: var(--color);
     cursor: pointer;
@@ -396,20 +400,56 @@ input[type=text].search-bar{
 }
 
 /*Table*/
+.table-container{
+   position: relative;
+   width: 100%;
+}
 
-#add-appointment{
+.fixed_header{
     table-layout: fixed;
-    width: 100%;
     border-collapse: collapse;
-    overflow: auto;
+    width: 100%;
+}
+    
+.fixed_header thead tr {
+    display: block;
+ }
+
+
+.fixed_header tbody{
+  display:block;
+  position: relative;
+  overflow: auto;
+  height: 60vh;
+  background-color: var(--containerbg);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  width: 100%;
+  padding-top: 0.3rem;
+  /* box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px; */
+}
+
+.fixed_header th, .fixed_header td{
+    font-weight: 400;
+    text-align: center;
+    width: 100px;
+
+
+}
+
+#add-appointment th{
+    color: var(--gray);
+    padding: 0.7rem 0;
  
 }
 
-
-#add-appointment th, #add-appointment td{
-    font-weight: 400;
-    text-align: center;
-
+#add-appointment td{
+    color: var(--color);
+    padding: 0.8rem 0;
+  
+}
+#add-appointment tbody tr:hover{
+    background-color: var(--search-barbg);
 }
 
 #add-appointment th:nth-child(3), 
@@ -417,51 +457,25 @@ input[type=text].search-bar{
     width: 25%;
 }
 
-#add-appointment th:nth-child(n+6), 
-#add-appointment td:nth-child(n+6){
-    width: 13%;
+#add-appointment th:nth-child(6), 
+#add-appointment td:nth-child(6){
+    width: 14.5%;
 }
 
-#add-appointment th{
-    color: var(--containerbg);
-    padding: 1rem 0;
- 
+#add-appointment th:nth-child(7), 
+#add-appointment td:nth-child(7){
+    width: 14.5%;
 }
 
-#add-appointment td{
-    color: var(--color);
-    padding: 0.6rem 0;
-  
-}
-#add-appointment tbody tr:hover{
-    color: var(--color);
-    padding: 0.6rem 0;
-    background-color: var(--search-barbg);
-  
+
+.white-container{
+    background-color: white;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
 }
 
-.my-custom-scrollbar {
-    position: relative;
-    overflow: auto;
-    height: 50vh;
-    background-color: var(--containerbg);
-    table-layout: fixed;
-  
-    
-}
 
-.my-custom-scrollbar thead{
-    position: sticky;
-    top: 0;
-    background-color:var(--gray);
-   
-}
 
-.table-wrapper-scroll-y {
-    display: block;
-    
-}
 
-.transparent{
-    background-color: transparent;
-}
+
