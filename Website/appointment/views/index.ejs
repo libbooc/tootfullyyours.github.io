@@ -18,8 +18,8 @@
         </div>
 
         <!-- form handling-->
-        <form action="/" method="POST">
-    
+     
+<form action="/" method="POST">
     <div class="table-wrapper-scroll-y my-custom-scrollbar"> 
             <table id="add-appointment">
                 <thead class="thead-dark">
@@ -33,24 +33,21 @@
                         <th>Contact Number</th>
                         <th> </th>
                     </tr>
-                  
                 </thead>
-
-                    <tbody id="myTable">
-                        <%-include('include/_show')%>
-                    </tbody>
+                <tbody id="myTable">
+                     <%-include('include/_show')%>
+                </tbody>
                
             </table>
         </div>
         </form>
-    
+        <div class="d-flex jc-end">
         <button class="add-app-btn">
                 <a href="/add-appointment" class=" d-flex al-center">
                     <i class="fa-solid fa-circle-plus mr-1 pd-1"> </i>
                     <div class="name-btn text-uppercase ">Add Appointment</div>
                 </a>
         </button>    
-        
     </div>
    </main>
 <!-- Main Site --> 
