@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    align-items: center;
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1EBEB6;
+    z-index: 1;
+ 
+}
+
+.right-nav{
+    text-align: left;
+}
+
+.right-nav ul{
+    margin-left: 30px;
+}
+
+.right-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin:  0 20px;
+}
+
+.right-nav ul li a{
+    text-decoration: none;
+    color: white;
+
+}
+
+.left-nav a{
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+}
+.loginBtn{
+    font-size: 15px;
+    font-weight: 600;
+    padding: 8px 20px;
+    width: 150px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    color:#1EBEB6;
+    margin-right: 50px;
+    cursor: pointer;
+}
+
+.loginBtn:hover{
+    
+    background-color: rgba(255, 255, 255, 0.9);
+
+  
+}
+
+
+.bodyPage{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    justify-content: space-between;
+    color:#1EBEB6;
+}
+
+.left-body{
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    z-index: 1;
+}
+
+.left-body .companyName{
+    color: #81CFCF;
+    font-size: 22px;
+}
+
+.left-body .intro1{
+    font-size: 80px;
+    margin-left: 10px;
+}
+
+.left-body .intro2{
+    margin-top: 20px;
+    font-weight: 300;
+}
+
+.location{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 70px;
+    align-items: center;
+}
+
+.icon-location{
+    width: 40px;
+    height: 40px;
+    color: #1EBEB6;
+}
+
+.location a{
+    color: #81CFCF;
+}
+
+.right-body{
+    position: absolute;
+    left: 45%;
+    right: 2%;
+   
+
+}
+.right-body img{
+    height: 80vh;
+    width: 100%;
+    z-index: -100;
+    
+}
+
+.image-container{
+    width: 100%;
+    min-width: none;
+   
+}
+
