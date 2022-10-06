@@ -60,7 +60,14 @@ button{
     width: 100%;
     min-height: 100vh;
     position: relative;
-    align-items: center;
+    align-items:center;
+}
+
+.containerform{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    align-items:center;
 }
 
 nav{
