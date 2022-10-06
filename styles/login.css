@@ -7,7 +7,20 @@
 }
 
 
+.g-signin2
 
+{
+width: 100%;
+position:absolute;
+top: 79%;
+}
+
+.g-signin2 >div{
+
+    margin: 0 auto;
+   
+
+}
 .container{
     width: 100%;
     min-height: 100vh;
