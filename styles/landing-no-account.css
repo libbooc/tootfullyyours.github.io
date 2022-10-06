@@ -1,11 +1,38 @@
 *{
     margin: 0;
     padding: 0;
+    outline: 0;
+    border: 0;
     overflow: hidden;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
+body{
+
+    height:100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    place-items: center;
+}
+
+h1{
+
+margin-bottom: 2rem;
+
+
+
+}
+
+
+form{
+
+display: flex;
+flex-direction: column;
+width: 24rem;
+gap:1rem;
+
+}
 .container{
     width: 100%;
     min-height: 100vh;
@@ -39,27 +66,25 @@ nav{
 }
 
 .right-nav ul li a{
-    position: relative;
     text-decoration: none;
     color: white;
 
 }
 
-
 .left-nav a{
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-    cursor: default;
 }
-.logoutBtn{
+.loginBtn{
     font-size: 15px;
+    font-weight: 600;
     padding: 8px 20px;
-    width: 140px;
+    width: 150px;
     border-radius: 10px;
-    border: 2px solid white;
-    background-color: #1EBEB6;
-    color: #fff;
+    border: none;
+    background-color: white;
+    color:#1EBEB6;
     margin-right: 50px;
     cursor: pointer;
 }
@@ -76,6 +101,7 @@ nav{
     position: absolute;
     left: 5%;
     top: 10%;
+    z-index: 1;
 }
 
 .left-body .companyName{
@@ -112,79 +138,21 @@ nav{
 
 .right-body{
     position: absolute;
-    left: 55%;
-    top: 10%;
-
-}
-
-.book-container{
-    width: 500px;
-    height: 520px;
-    background: #1EBEB6;
-    border-radius: 20px;
-    border: none;
-}
-
-.book-container h3{
-    font-size: 22px;
-    margin: 35px 0;
-    text-align: center;
-    color: #fff;
-}
-.book-container p{
-    font-size: 16px;
-    color: #fff;
-    text-align: center;
-    margin-top: -10px;
-    margin-bottom: 27px;
-}
-
-.input-field{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    left: 45%;
+    right: 2%;
    
-}
-
-.input-field input{
-    padding: 10px 30px;
-    width: 350px;
-    border: none;
-    margin: 5px 0;
-    border-radius: 15px;
-}
-
-.input-field input::placeholder{
-    color: #B9BBC2
 
 }
-
-.input-field .message{
-    height: 100px;
+.right-body img{
+    height: 80vh;
+    width: 100%;
+    z-index: -100;
     
 }
 
-.book{
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 5px  0;
-    background: #fff;
-    color: #1EBEB6;
-    border: none;
-    text-align: center;
-    width: 120px;
-    border-radius: 20px;
+.image-container{
+    width: 100%;
+    min-width: none;
+   
 }
-
-.login-signup-btn{
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 0.5rem 1.8rem;
-    border-radius: 10px;
-    border: 2px solid white;
-    background-color: var(--white);
-    color: var(--bg-header);
-    cursor: pointer;
-
 
