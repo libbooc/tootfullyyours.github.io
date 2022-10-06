@@ -188,3 +188,11 @@ nav{
     cursor: pointer;
 
 }
+
+
+.login-signup-btn:hover, .loginBtn:hover{
+
+    background-color: rgba(255,255,255, 0.7);
+
+
+}
