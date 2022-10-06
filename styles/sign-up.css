@@ -5,7 +5,26 @@
     overflow: hidden;
     font-family: sans-serif;
 }
+img{
 
+    max-width: 100%;
+    max-height: 100%;
+}
+.backicon{
+position:absolute;
+height:50px;
+width:50px;
+left:32%;
+top:10%;
+}
+
+.homebutton{
+    position:absolute;
+    height:50px;
+    width:50px;
+    left:32%;
+    top:20%;
+    }
 
 .container{
     width: 100%;
