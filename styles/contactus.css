@@ -153,12 +153,14 @@ textarea {
     font-weight: bold;
     border-radius: 10px;
     width: 100%;
+    margin-top: 0.4rem;
     
     
 }
 
 input::placeholder, textarea::placeholder{
-    color: rgb(172, 175, 186, 0.5);
+    color: rgb(172, 175, 186, 0.4);
+    font-weight: 400;
    
 
 }

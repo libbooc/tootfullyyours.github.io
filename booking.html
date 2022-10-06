@@ -1,32 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Booking</title>
-	<link rel="stylesheet" href="styles/booking.css">
-	<!-- Font -->
-	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700,900" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOOTHFULLY YOURS</title>
+    <link rel="stylesheet" href="styles/booking.css">
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+   <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="booking.html">Book An Appointment</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+              
+                <li><button class="login-signup-btn">Login/Sign up</button></li>
+            </ul>
+        </nav>
+    </header>
 
 
-
-
-<div class="wrapper">
-
-
-	<div class="container">
+	<div class="container1">
 		<div class="container-time">
 				<h2 class="heading">Time Open</h2>
 				<h3 class="heading-days">Monday-Friday</h3>
-				<p>10am - 7pm</p>
-
-
-				<hr>
-
-				
+				<p>10am - 5pm</p>
 		</div>
-
 		<div class="container-form">
 				<form action="#">
 					<h2 class="heading heading-yellow">Book Appointment</h2>
@@ -49,11 +57,28 @@
 					</div>
 					<div class="form-field">
 						<p>Time</p>
-						<input type="time">
+						<select name="time" id="#">
+							<option value="1">10:00AM</option>
+							<option value="2">10:30AM</option>
+							<option value="3">11:00AM</option>
+							<option value="4">11:30AM</option>
+							<option value="5">11:30AM</option>
+							<option value="6">1:00PM</option>
+							<option value="7">1:30PM</option>
+							<option value="8">2:00PM</option>
+							<option value="9">2:30PM</option>
+							<option value="10">3:00PM</option>
+							<option value="11">3:30PM</option>						
+							<option value="12">4:00PM</option>
+							<option value="13">4:30PM</option>
+
+
+
+						</select>
 					</div>
 					<div class="form-field">
 						<p>What procedure?</p>
-						<select name="select" id="#">
+						<select name="procedure" id="#">
 							<option value="1">Fillings</option>
 							<option value="2">Root Canal</option>
 							<option value="3">Consultation</option>
@@ -64,20 +89,16 @@
 							<option value="8"> Teeth Whitening</option>
 							<option value="9">Dental Brace</option>
 							<option value="10">Tooth Extraction</option>
-							<option value="11">Scaling</option>							<option value="11">Scaling</option>
+							<option value="11">Scaling</option>						
 							<option value="12">Others</option>
-
-
-
 						</select>
 					</div>
-
 
 					<button class="btn">Submit</button>
 				</form>
 		</div>
 	</div>
-</div>	
+
 	
 </body>
 </html>
