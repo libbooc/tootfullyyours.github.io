@@ -14,43 +14,74 @@
 }
 
 nav{
-    width: 100%;
-    height: 80px;
+    padding: 0 2rem;
+}
+
+nav ul{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #1EBEB6;
-    z-index: 1;
- 
-}
-
-.right-nav{
-    text-align: left;
-}
-
-.right-nav ul{
-    margin-left: 30px;
-}
-
-.right-nav ul li{
     list-style: none;
-    display: inline-block;
-    margin:  0 20px;
-}
-
-.right-nav ul li a{
-    position: relative;
-    text-decoration: none;
-    color: white;
+    justify-content: center;
+    align-items: center;
 
 }
 
+nav ul li{
+    margin: 0 1rem;
+}
 
-.left-nav a{
-    color: #fff;
-    margin: 0 10px;
+
+nav ul li a{
+    font-weight: 400;
+    color: var(--white);
     text-decoration: none;
-    cursor: default;
+   
+}
+
+nav ul li a::after{
+    content: "";
+    display: block;
+    /* margin: auto;  // It will start at mid*/ 
+    margin-top: 0.25rem;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width 0.5s ease, background-color .5s ease;
+}
+
+nav ul li a:hover:after{
+    width: 100%;
+    background: var(--white);
+}
+
+.login-signup-btn{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1.8rem;
+    border-radius: 10px;
+    border: 2px solid white;
+    background-color: var(--white);
+    color: var(--bg-header);
+    cursor: pointer;
+}
+
+
+
+@media only screen and (max-width: 800px){
+    header{
+        flex-direction: column;
+    }
+
+    nav ul{
+        flex-direction: column;
+    }
+    
+    nav ul li{
+        margin: 2rem 0;
+    }
+    
+    header{
+        border-bottom-right-radius: 4rem ;
+    }
 }
 .logoutBtn{
     font-size: 15px;
