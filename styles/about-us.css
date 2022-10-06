@@ -127,13 +127,6 @@ nav ul li a:hover:after{
 
 
 
-    border-radius: 10px;
-    border: 2px solid white;
-    background-color: var(--bg-header);
-    color: var(--white);
-    cursor: pointer;
-}
-
 
 
 
