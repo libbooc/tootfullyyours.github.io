@@ -8,54 +8,47 @@
     <link rel="stylesheet" href="styles/login.css">
 </head>
 <body>
-    <div class="container">
-        <div class="sign-in-container">
-            <div class="sign-in-header">
-                <h3 class="text">TOOTHFULLY YOURS</h3>
-                <P class="text">Dental Clinic</P>
-            </div>
-
-            <div class="sign-in-body">
-                <div class="row1">
-                    <h3>Sign In</h3>
-                    <div class="social-media-icons">
-                        <img class="facebook" src="icons/facebook-icon.png">
-                        <img class="twitter" src="icons/twitter-icon.png">
-                    </div>
-                </div>
-                <div class="row2">
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Password">
-                </div>
-                <div class="row3">
-
-                    <a>
-                    <button type="button" class="sign-in">Sign in</button>
-                </a>
-                </div>
-                <div class="row4">
-                    <div class="remember-me">
-                        <input class="check" type="checkbox" >
-                        <p>Remember me</p>
-                    </div>
-                    <p class="forgotPass">Forgot Password</p>
-                </div>
-
-                <div class="row6">
-                    <p>or</p>
-                    <button type="button">
-                        <img src="icons/google-icon.png"> 
-                        Sign in with Google
-                    </button>
-                </div>
-                <div class="row5">
-                    <p> Not a member? <a href="">Sign up</a></p>
-                </div>
-            </div>
-
+    <div class="sign-in-container">
+        <div class="sign-in-header">
+            <h3 class="text">TOOTHFULLY YOURS</h3>
+            <P class="text">Dental Clinic</P>
         </div>
-     
+
+        <div class="sign-in-body">
+            <div class="row1">
+                <h3>Sign In</h3>
+                <div class="social-media-icons">
+                    <img class="facebook" src="/img/facebook-icon.png">
+                    <img class="twitter" src="/img/twitter-icon.png">
+                </div>
+            </div>
+            <form action="/route/login" method="POST">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <button type="submit">Login</button>
+            </form>
+            <div class="row4">
+                <div class="remember-me">
+                    <input class="check" type="checkbox" >
+                    <p>Remember me</p>
+                </div>
+                <p class="forgotPass">Forgot Password</p>
+            </div>
+
+            <div class="row6">
+                <p>or</p>
+                <button type="button">
+                    <img src="/img/google-icon.png"> 
+                    Sign in with Google
+                </button>
+            </div>
+            <div class="row5">
+                <p> Not a member? <a href="/route/register">Sign up</a></p>
+            </div>
+        </div>
+
     </div>
-    
+</div>
+
 </body>
 </html>
