@@ -19,6 +19,7 @@
          </a>       
             </div>
     <div class="container">
+
         <div class="sign-in-container">
             <div class="sign-in-header">
                 <h3 class="text">TOOTHFULLY YOURS</h3>
@@ -34,24 +35,24 @@
                     </div>
                 </div>
                 <div class="row2">
-                    <input type="email" placeholder="Email">
-                    <input type="text" placeholder="Password">
+                    <input id="emailtextfield" type="email" placeholder="Email">
+                    <input id="passwordtextfield" type="text" placeholder="Password">
                 </div>
                 <div class="row3">
 
                     <a>
-                    <button type="button" class="sign-in">Sign in</button>
+                    <button type="button" class="sign-in" id="signInButton">Sign in</button>
                 </a>
 
 
-                 <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                 <div id ="googleSignin" class="g-signin2" data-onsuccess="onSignIn"></div>
                 </div>
                 <div class="row4">
                     <div class="remember-me">
-                        <input class="check" type="checkbox" >
+                        <input id="remebermecheckbox" class="check" type="checkbox" >
                         <p>Remember me</p>
                     </div>
-                    <p class="forgotPass">Forgot Password</p>
+                    <p id="forgotPassword" class="forgotPass">Forgot Password</p>
                 </div>
 
                 <div class="row6">
@@ -60,13 +61,16 @@
                <br>
                 </div>
                 <div class="row5">
-                    <p> Not a member? <a href="sign-up.html">Sign up</a></p>
+                    <p> Not a member?</p> <a>Sign up</a>
+        
+                </div>
+             
                 </div>
             </div>
 
         </div>
      
     </div>
-    
+    <script src="script/login_javascript.js"></script>
 </body>
 </html>
