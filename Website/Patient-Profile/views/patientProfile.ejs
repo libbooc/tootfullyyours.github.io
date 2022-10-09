@@ -1,0 +1,113 @@
+
+<!-- include header -->
+<%-include('include/_header')%>
+<!-- include header -->
+    <!-- Main Site --> 
+    <main class="container"> 
+        <div class="col">
+            <div class="row-1">
+                <div class="patient-photo"><img src="img/edit 1.png"></div>
+                <div class="patient-profile">
+                    <form action="">
+                        <div class="form-group-1">
+                            <label class="info"></label>
+                            <input type="text" name="p_name" placeholder="Lastname, Firstname, Middlename">
+                        </div>
+                        <div class="form-group-1">
+                            <label class="info">Email:</label>
+                            <input type="text" name="p_email">
+                        </div>
+                        <div class="form-group-1">
+                            <label class="info">Phone:</label>
+                            <input type="number" name="p_phoneNum">
+                        </div>
+                  
+                        </form>
+                </div>
+            </div>
+            <div class="row-2">
+                <h3 class="basic-info">Basic Information</h3>
+                <div class="information">
+                    <form action="/api/patientProfile" method="POST">
+                        <div class="form-group">
+                            <label class="info">Birth Date: </label>
+                            <input type="text" name="p_birthDate">
+                        </div>
+                        <div class="form-group">
+                            <label class="info">Age: </label>
+                            <input type="number" name="p_age">
+                        </div>
+                        <div class="form-group">
+                            <label class="info">Gender: </label>
+                            <input type="text" name="p_gender">
+                        </div>
+                        <div class="form-group">
+                            <label class="info">Nationality: </label>
+                            <input type="text" name="p_nationality">
+                        </div>
+                        <div class="form-group">
+                            <label class="info">Home Address: </label>
+                            <input type="text" name="p_homeAddress">
+                        </div>
+                        <div class="form-group">
+                            <label class="info">Emergency Contact Person: </label>
+                            <input type="text" name="p_ECFullname">
+                        </div>
+                        <div class="form-group">
+                            <label class="info">Emergency Contact Number: </label>
+                            <input type="number" name="p_ECNumber">
+                        </div>
+                        <div class="form-group">
+                            <label class="info">Emergency Contact Relationship: </label>
+                            <input type="text" name="p_ECRelationship">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit">Save</button>   
+                        </div>       
+                       
+                </form>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="table-container">
+                <div class="table-header-container">
+                    <div class="table-picker" onclick="location.href = 'my-profile-medical.html'">
+                        <img class="picker-icon" src="img/history 2.png">
+                        <h3 class="picker-name">Medical History</h3>
+                    </div>
+                    <div class="table-picker" onclick="location.href = 'my-profile-history.html'">
+                        <img class="picker-icon" src="img/appointment 2.png">
+                        <h3 class="picker-name">Appointment History</h3>
+                    </div>
+                </div>
+            
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <div class="medical-input">
+                        <h3 class="question">Are you under medical treatment right now?</h4>
+                        <textarea class="answer" type="text" placeholder="Type Here..." required></textarea>
+                    </div>
+                    <div class="medical-input">
+                        <h3 class="question">Have you ever had serious illness or surgical operations?</h4>
+                        <textarea class="answer" type="text" placeholder="Type Here..." required></textarea>
+                    </div>
+                    <div class="medical-input">
+                        <h3 class="question">Are you taking any medication, maintenance meds? What specifically?</h4>
+                        <textarea class="answer" type="text" placeholder="Type Here..." required></textarea>
+                    </div>
+                    <div class="medical-input">
+                        <h3 class="question">Allergies to medication?</h4>
+                        <textarea class="answer" type="text" placeholder="Type Here..." required></textarea>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </main>
+        <!-- Main Site --> 
+    
+
+
+<!-- include footer -->
+<%-include('include/_footer')%>
+<!-- include footer --> 
