@@ -39,7 +39,7 @@ app.use('/route', router)
 
 //home route
 app.get('/', (req, res) =>{
-    res.render('_home-body',{title: "ToothFully Yours"})
+    res.render('home_body',{title: "ToothFully Yours"})
 })
 
 app.listen(PORT, ()=>{

@@ -119,7 +119,7 @@ nav{
 
 .book-container{
     width: 500px;
-    height: 520px;
+    height: 600px;
     background: #1EBEB6;
     border-radius: 20px;
     border: none;
@@ -146,21 +146,21 @@ nav{
    
 }
 
-.input-field input{
-    padding: 10px 30px;
+.input-field input, .input-field select{
+    padding: 0.5rem 30px;
     width: 350px;
     border: none;
     margin: 5px 0;
     border-radius: 15px;
 }
 
-.input-field input::placeholder{
+.input-field input::placeholder, .input-field select::placeholder{
     color: #B9BBC2
 
 }
 
 .input-field .message{
-    height: 100px;
+    height: 5rem;
     
 }
 

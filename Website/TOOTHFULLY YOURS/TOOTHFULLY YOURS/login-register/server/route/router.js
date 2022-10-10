@@ -66,12 +66,12 @@ router.get('/logout', (req, res) =>{
 
 //route for about us
 
-router.get('/about-us_body', (req, res) =>{
+router.get('/about-us', (req, res) =>{
     res.render("about-us_body",{title: "About Us"})
 })
 
-router.get('/about-us', (req, res) =>{
-    res.render("_about-us-no-account",{title: "About Us"})
+router.get('/about-us-no-account', (req, res) =>{
+    res.render("about-us-no-account_body",{title: "About Us"})
 })
 
 
