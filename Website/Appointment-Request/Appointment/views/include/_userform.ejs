@@ -1,0 +1,51 @@
+<div class="form-container">
+    <form action="/api/appointmentRequest" method="POST" id="add_appointmentRequest">
+        <div class="book-container">
+            <h3>BOOK AN APPOINTMENT</h3>
+            <p>As soon as you as you contact our expert team, <br> 
+            we will get back to you as soon as possibe! Book <br>
+            an appointment at the comfort of your home and <br>
+            we'll take care of the rest!</p>
+            <div class="input-field">
+                <!-- <input type="hidden" name="id" id="id" value=""> -->
+                <input type="text" name="p_name" placeholder="Enter Full name">
+                <input type="email" name="p_email" placeholder="Enter email address">
+                <input type="number" name="p_phoneNum" placeholder="Enter phone number">
+                <input type="date" name="p_ap_date">
+                <select name="time" id="#" >
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="1">10:00AM-11:00AM</option>
+                    <option value="2">11:00AM-12:00PM</option>
+                    <option value="3">1:00PM-2:00PM</option>>
+                    <option value="4">2:00PM-3:00PM</option>
+                    <option value="5">3:00PM-4:00PM</option>				
+                    <option value="6">4:00PM-5:00PM</option>
+    
+    
+    
+    
+                </select>
+    
+                <select name="procedure" id="#">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="1">Fillings</option>
+                    <option value="2">Root Canal</option>
+                    <option value="3">Consultation</option>
+                    <option value="4">Fixing Bridge</option>
+                    <option value="5">Dental Implant</option>
+                    <option value="6">Dental Crown</option>
+                    <option value="7">X-Ray</option>
+                    <option value="8"> Teeth Whitening</option>
+                    <option value="9">Dental Brace</option>
+                    <option value="10">Tooth Extraction</option>
+                    <option value="11">Scaling</option>						
+                    <option value="12">Others</option>
+                </select>
+                <input class="message" name="p_message" type="text" placeholder="Add your message...">
+    
+                <button type="submit"  class="book"> BOOK</button>
+            </div>    
+        </div>
+    
+    </form>
+    </div>
