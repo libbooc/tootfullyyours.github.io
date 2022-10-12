@@ -10,9 +10,24 @@ const controller1 = require("../controller/employee_controller")
 
 
 
+
 route.get('/', services.homeRoutes)
 route.get('/add-appointmentRequest', services.add_appointmentRequest);
 route.get('/appointment', services.Appointment);
+
+
+// route.post('/appointment', function(req, res){
+//     controller.create_appointment
+// });
+
+// route.get('/appointment1',function(req, res){
+//     controller.find_appointment;
+// });
+
+// route.delete('/appointment/:id', controller.delete_appointment);
+
+route.get('/appointment-data', controller.find_appointment);
+route.delete('/appointment:id', controller.delete_appointment);
 
 
 

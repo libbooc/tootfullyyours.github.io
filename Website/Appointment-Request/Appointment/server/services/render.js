@@ -20,14 +20,14 @@ exports.add_appointmentRequest = (req, res) =>{
 }
 
 exports.Appointment = (req, res) =>{
-    axios.get("http://localhost:5000/appointment")
-        .then(function(response){
-            res.render('appointment', {appoint: response.data});
-        })
-
-    .catch(err =>{  
-        res.send(err);
+    axios.get("http://localhost:5000/appointment-data")
+    .then(function(response){
+        res.render('appointment', {appoint: response.data});
     })
+
+.catch(err =>{  
+    res.send(err);
+})
    
 }
 
