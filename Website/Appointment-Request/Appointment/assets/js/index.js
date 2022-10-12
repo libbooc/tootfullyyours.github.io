@@ -69,7 +69,31 @@ if(window.location.pathname == "/"){
         });
     });
 
+    if(window.location.pathname == "/appointment"){
+        $ondelete = $("#add-appointment tbody tr td a.delete");
+        $ondelete.click(function(){
 
-    function employeeID(){
-        employeeID += 1;
-    }   
+            var id = $(this).attr("data-id")
+            var request = {
+                "url":`http://localhost:5000/appointment/${id}`,
+                "method": "DELETE"
+            }    
+
+            if(confirm("Do you want to confirm this appointment?")){
+                $.ajax(request).done(function(response){
+                    alert("Appointment Confirmed Successfully");
+                    location.reload();
+                })
+            }
+        })
+    }
+
+    $("#search-box").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+
+
+  

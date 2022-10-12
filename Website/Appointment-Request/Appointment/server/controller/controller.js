@@ -163,47 +163,19 @@ exports.find_appointment = (req,res)=>{
 exports.delete_appointment = (req,res)=>{
     const id = req.params.id;
 
-    
-   
-    // appointmentRequestdb.findById(id, (error,data) =>{
-    //     if (error){
-    //         console.log(error)
-    //     } else {
-    //         const appoint = new Appointdb({
-    //             p_name: data.p_name,
-    //             p_email: data.p_email,
-    //             p_phoneNum: data.p_phoneNum,
-    //             p_ap_date: data.p_ap_date,
-    //             p_ap_time: data.p_ap_time,
-    //             p_procedure: data.p_procedure
-    //         })
-    //     appoint
-    //     .save(appoint).then(data =>{
-    //         if(!data){
-    //             res.status(404).send({message: "Not found appointmentRequest with id" + id})
-    //         }else{
-    //             console.log(data)
-    //             console.log(`${id}`)
-    //         }
-    //         }).catch(err =>{
-    //             res.status(500).send({message: "Error retrieving appointmentRequest with id" + id})
-    //         })
-    //     }
-    //     })
-
         Appointdb.findByIdAndDelete(id)
         .then(data =>{
             if(!data){
                 res.status(404).send({message: `Cannot Delete with id ${id}. Maybe id is wrong`})
             }else{
                 res.send({
-                    message: "appointmentRequest was deleted successfully!"
+                    message: "appointment was deleted successfully!"
                 })
             }
         })
         .catch(err =>{
             res.status(500).send({
-                message: "Could not delete appointmentRequest with id=" + id
+                message: "Could not delete appointment with id=" + id
             });
         })
     
