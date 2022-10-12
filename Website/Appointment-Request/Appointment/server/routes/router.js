@@ -11,7 +11,7 @@ const controller1 = require("../controller/employee_controller")
 
 route.get('/', services.homeRoutes)
 route.get('/add-appointmentRequest', services.add_appointmentRequest);
-route.get('/toothfully/Appointment', services.Appointment);
+route.get('/appointment', services.Appointment);
 
 route.post('/api/appointmentRequest', controller.create);
 route.get('/api/appointmentRequest', controller.find);

@@ -1,4 +1,7 @@
 $("#add_employee").submit(function(event){
+    let employeeID = 0
+    employeeID += 1;
+    document.getElementById("e_ID") = employeeID;
     alert("Data Inserted Successfully!")
 })
 
@@ -64,5 +67,9 @@ if(window.location.pathname == "/"){
         $("#myTable tr").filter(function() {
           $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
-    })
+    });
 
+
+    function employeeID(){
+        employeeID += 1;
+    }   

@@ -17,7 +17,7 @@ var employeeSchema = new mongoose.Schema({
     e_emg_contactPerson2:{type: String, required: true},
     e_emg_contactPerson2_phoneNum:{type: String, required: true},
     e_emg_contactPerson2_relationship:{type: String, required: true},
-    e_ID:{type: String, required: true, unique: true},
+    e_ID:{type: String, unique: true},
     e_position:{type: String, required: true},
     e_startDate:{type: String, required: true},
     e_regtime:{type: Number, required: true},

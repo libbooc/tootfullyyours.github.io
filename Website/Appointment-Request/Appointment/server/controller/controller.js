@@ -2,6 +2,8 @@
 
 var appointmentRequestdb = require('../model/model')
 
+var Appointdb = require('../model/appointment_model')
+
 // create and save new appointmentRequest
 exports.create = (req,res)=>{
     // validate request
@@ -98,6 +100,10 @@ exports.find = (req,res)=>{
 
 exports.delete = (req,res)=>{
     const id = req.params.id;
+
+    Appointdb = appointmentRequestdb.findById(id)
+
+
     appointmentRequestdb.findByIdAndDelete(id)
         .then(data =>{
             if(!data){

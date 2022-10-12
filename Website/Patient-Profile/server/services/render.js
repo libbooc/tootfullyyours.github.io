@@ -6,7 +6,7 @@ exports.homeRoutes = (req, res) =>{
     // Make a get request to /api/patientProfile
     axios.get("http://localhost:5000/api/patientProfile")
         .then(function(response){
-            res.render('patientProfile', {patientProfile: response.data});
+            res.render('update_patientProfile', {patientProfile: response.data});
         })
 
     .catch(err =>{  
