@@ -1,5 +1,5 @@
 <div class="form-container">
-    <form action="/add-appointmentRequest" method="POST" id="add_appointmentRequest">
+    <form action="/api/appointmentRequest" method="POST" id="add_appointmentRequest">
         <div class="book-container">
             <h3>BOOK AN APPOINTMENT</h3>
             <p>As soon as you as you contact our expert team, <br> 
@@ -12,32 +12,32 @@
                 <input type="email" name="p_email" placeholder="Enter email address">
                 <input type="number" name="p_phoneNum" placeholder="Enter phone number">
                 <input type="date" name="p_ap_date">
-                <select name="time" id="#" >
+                <select name="p_ap_time" id="#" >
                     <option value="" disabled selected>Select your option</option>
-                    <option value="1">10:00AM-11:00AM</option>
-                    <option value="2">11:00AM-12:00PM</option>
-                    <option value="3">1:00PM-2:00PM</option>>
-                    <option value="4">2:00PM-3:00PM</option>
-                    <option value="5">3:00PM-4:00PM</option>				
-                    <option value="6">4:00PM-5:00PM</option>
+                    <option value="10:00AM-11:00AM">10:00AM-11:00AM</option>
+                    <option value="10:00AM-11:00AM">10:00AM-11:00AM</option>
+                    <option value="1:00PM-2:00PM">1:00PM-2:00PM</option>>
+                    <option value="2:00PM-3:00PM">2:00PM-3:00PM</option>
+                    <option value="3:00PM-4:00PM">3:00PM-4:00PM</option>				
+                    <option value="4:00PM-5:00PM">4:00PM-5:00PM</option>
                 </select>
     
-                <select name="procedure" id="#">
+                <select name="p_procedure" id="#">
                     <option value="" disabled selected>Select your option</option>
-                    <option value="1">Fillings</option>
-                    <option value="2">Root Canal</option>
-                    <option value="3">Consultation</option>
-                    <option value="4">Fixing Bridge</option>
-                    <option value="5">Dental Implant</option>
-                    <option value="6">Dental Crown</option>
-                    <option value="7">X-Ray</option>
-                    <option value="8"> Teeth Whitening</option>
-                    <option value="9">Dental Brace</option>
-                    <option value="10">Tooth Extraction</option>
-                    <option value="11">Scaling</option>						
-                    <option value="12">Others</option>
+                    <option value="Fillings">Fillings</option>
+                    <option value="Root Canal">Root Canal</option>
+                    <option value="Consultation">Consultation</option>
+                    <option value="Fixing Bridge">Fixing Bridge</option>
+                    <option value="Dental Implant">Dental Implant</option>
+                    <option value="Dental Crown">Dental Crown</option>
+                    <option value="X-Ray">X-Ray</option>
+                    <option value="Teeth Whitening"> Teeth Whitening</option>
+                    <option value="Dental Brace">Dental Brace</option>
+                    <option value="Tooth Extraction">Tooth Extraction</option>
+                    <option value="Scaling">Scaling</option>						
+                    <option value="Others">Others</option>
                 </select>
-                <input class="message" name="p_message" type="text" placeholder="Add your message...">
+           
     
                 <button type="submit"  class="book"> BOOK</button>
             </div>    

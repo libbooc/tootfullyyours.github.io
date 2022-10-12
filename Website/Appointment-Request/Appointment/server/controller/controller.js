@@ -71,40 +71,40 @@ exports.find = (req,res)=>{
 
   
 }
-
- // Update a new idetified appointmentRequest by appointmentRequest id
-// exports.update = (req,res)=>{
-//     if(!req.body){
-//         return res
-//             .status(400)
-//             .send({message:"Data to update can not be empty"})
-            
-//     }
-
-//     const id = req.params.id;
-//     appointmentRequestdb.findByIdAndUpdate(id, req.body, {useFindAndModify:false})
-//         .then(data =>{
-//             if(!data){
-//                 res.status(404).send({message: `Cannot Update appointmentRequest with ${id}. Maybe appointmentRequest not found!`})
-//             }else{
-//                 res.send(data)
-//             }
-//         })
-//         .catch(err =>{
-//             res.status(500).send({message: "Error Update appointmentRequest information"})
-//         })
-    
-// }
-
 // // Delete a appointmentRequest with specified appointmentRequest id in the request
 
 exports.delete = (req,res)=>{
     const id = req.params.id;
 
-    Appointdb = appointmentRequestdb.findById(id)
+    
+   
+    appointmentRequestdb.findById(id, (error,data) =>{
+        if (error){
+            console.log(error)
+        } else {
+            const appoint = new Appointdb({
+                p_name: data.p_name,
+                p_email: data.p_email,
+                p_phoneNum: data.p_phoneNum,
+                p_ap_date: data.p_ap_date,
+                p_ap_time: data.p_ap_time,
+                p_procedure: data.p_procedure
+            })
+        appoint
+        .save(appoint).then(data =>{
+            if(!data){
+                res.status(404).send({message: "Not found appointmentRequest with id" + id})
+            }else{
+                console.log(data)
+                console.log(`${id}`)
+            }
+            }).catch(err =>{
+                res.status(500).send({message: "Error retrieving appointmentRequest with id" + id})
+            })
+        }
+        })
 
-
-    appointmentRequestdb.findByIdAndDelete(id)
+        appointmentRequestdb.findByIdAndDelete(id)
         .then(data =>{
             if(!data){
                 res.status(404).send({message: `Cannot Delete with id ${id}. Maybe id is wrong`})
@@ -118,5 +118,11 @@ exports.delete = (req,res)=>{
             res.status(500).send({
                 message: "Could not delete appointmentRequest with id=" + id
             });
-        });
+        })
+    
+
+
+   
+ 
+   
 }

@@ -20,7 +20,15 @@ exports.add_appointmentRequest = (req, res) =>{
 }
 
 exports.Appointment = (req, res) =>{
-    res.render("index");
+    axios.get("http://localhost:5000/appointment")
+        .then(function(response){
+            res.render('appointment', {appoint: response.data});
+        })
+
+    .catch(err =>{  
+        res.send(err);
+    })
+   
 }
 
 

@@ -9,13 +9,18 @@ const services1 = require("../services/employee_render")
 const controller1 = require("../controller/employee_controller")
 
 
+
 route.get('/', services.homeRoutes)
 route.get('/add-appointmentRequest', services.add_appointmentRequest);
 route.get('/appointment', services.Appointment);
 
+
+
+
 route.post('/api/appointmentRequest', controller.create);
 route.get('/api/appointmentRequest', controller.find);
 route.delete('/api/appointmentRequest/:id', controller.delete);
+
 
 route.get('/employee', services1.Employee)
 route.get('/add-employee', services1.add_employee);
