@@ -166,7 +166,7 @@ nav ul li a:hover:after {
 /*DENTAL SERVICES & REVENUE */
 
 .revenue-title {
-  margin: 40px;
+  margin: 60px;
 }
 
 .revenue-table {
@@ -175,15 +175,16 @@ nav ul li a:hover:after {
   border-collapse: collapse;
   font-size: 0.9em;
   font-family: "Figtree";
-  width: 100%;
-  min-width: 400px;
+  min-width: 700px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
+
 
 .revenue-table thead tr {
     background-color: #1EBEB6;
     color: #ffffff;
-    text-align: left;
+    text-align: center;
+    font-size: 110%;
 }
 
 .revenue-table th,
@@ -210,7 +211,17 @@ nav ul li a:hover:after {
 }
 
 .revenue-table tr:last-child>td:first-child {
+  border-bottom: 1px solid #38B1B1;
+  font-weight:bold;
+}
+
+.revenue-table tr:nth-child(11)>td:first-child {
     border-bottom: 1px solid #38B1B1;
+}
+
+
+.revenue-table tr:last-child>td:nth-child(-n+11):nth-child(n+1) {
+  background-color: #D9D9D9;
 }
 
 .revenue-table tbody tr.active-row {
@@ -220,7 +231,7 @@ nav ul li a:hover:after {
 
 
 span.total-revenue {
-  color: #009879;
+  color: #0b6352;
   font-size: 120%;
      
 }
