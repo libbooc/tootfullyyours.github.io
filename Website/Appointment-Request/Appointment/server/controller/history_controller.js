@@ -13,11 +13,16 @@ exports.create = (req,res)=>{
     }
 
     const history = new Historydb({
-        transNo: req.body.transNo,
-        phdate: req.body.phdate,
-        toothNo: req.body.toothNo,
-        procedure: req.body.procedure,
-        payments: req.body.payments
+        p_name: req.body.p_name,
+        p_email: req.body.p_email,
+        p_phoneNum: req.body.p_phoneNum,
+        p_ap_date: req.body.p_ap_date,
+        p_ap_time: req.body.p_ap_time,
+        p_procedure: req.body.p_procedure
+      
+        
+
+     
     })
 
     // save patient history in the database
