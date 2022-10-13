@@ -87,13 +87,22 @@ if(window.location.pathname == "/"){
             }
         })
     }
+    if(window.location.pathname == "/history"){
+        $ondelete = $("#add-history tbody tr td a.delete");
+        $ondelete.click(function(){
 
-    $("#search-box").on("keyup", function() {
-        var value = $(this).val().toLowerCase();
-        $("#myTable tr").filter(function() {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-    });
+            var id = $(this).attr("data-id")
+            var request = {
+                "url":`http://localhost:5000/history/${id}`,
+                "method": "DELETE"
+            }    
 
-
+            if(confirm("Do you want to confirm this transaction?")){
+                $.ajax(request).done(function(response){
+                    alert("Transaction Confirmed Successfully");
+                    location.reload();
+                })
+            }
+        })
+    }
   
