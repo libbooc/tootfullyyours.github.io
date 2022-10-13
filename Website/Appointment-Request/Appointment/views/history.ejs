@@ -1,0 +1,51 @@
+
+<!-- include header -->
+<%-include('include/_header-history')%>
+<!-- include header -->
+
+ <!-- Main Site --> 
+ <main id="site-main">
+    
+        <div class="input-icon">
+            <input type="text" class="search-bar" placeholder="Search..." id="search-box" onkeyup="sendData(this)"> 
+            <i class="fa-solid fa-magnifying-glass icon"></i>
+        </div>
+  
+    <div class="history-container">
+        
+        <div class="table-history-header">
+            <h3 class="text-center text-white text-normal">History</h3>
+        </div>
+        <form action="/" method="POST">
+            <table id="add-history">
+                <thead class="">
+                    <tr>
+                        <th>No.</th>
+                        <th>Trans. No.</th>
+                        <th>Date</th>
+                        <th>Tooth No.</th>
+                        <th>Procedure</th>
+                        <th>Payments</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                    <tbody id="myTable">
+                        <%-include('include/_show-history') %>
+                    </tbody>
+               
+            </table>
+        </form>
+    </div>
+    <div class="history-button jc-end">
+        <button class="btn-history">
+                <a href="/add-history" class=" d-flex al-center">
+                    <div class="name-btn text-uppercase ">Add Patient History</div>
+                </a>
+        </button>    
+    </div>
+   </main>
+<!-- Main Site --> 
+
+<!-- include footer -->
+<%-include('include/_footer')%>
+<!-- include footer --> 
