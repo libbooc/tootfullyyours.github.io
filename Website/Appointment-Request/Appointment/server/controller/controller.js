@@ -78,14 +78,17 @@ exports.find = (req,res)=>{
 
 exports.delete = (req,res)=>{
     const id = req.params.id;
-
+    let confirm = false
     
-   
+   if(confirm != true){
+
+
     appointmentRequestdb.findById(id, (error,data) =>{
         if (error){
             console.log(error)
         } else {
             const appoint = new Appointdb({
+                _id: data._id,
                 p_name: data.p_name,
                 p_email: data.p_email,
                 p_phoneNum: data.p_phoneNum,
@@ -94,18 +97,13 @@ exports.delete = (req,res)=>{
                 p_procedure: data.p_procedure
             })
         appoint
-        .save(appoint).then(data =>{
-            if(!data){
-                res.status(404).send({message: "Not found appointmentRequest with id" + id})
-            }else{
-                console.log(data)
-                console.log(`${id}`)
-            }
-            }).catch(err =>{
-                res.status(500).send({message: "Error retrieving appointmentRequest with id" + id})
-            })
+        .save(appoint)
+
+        confirm = true
         }
-        })
+        })}
+        
+        if (confirm = true){
 
         appointmentRequestdb.findByIdAndDelete(id)
         .then(data =>{
@@ -117,14 +115,15 @@ exports.delete = (req,res)=>{
                 })
             }
         })
-        .catch(err =>{
+        .catch(err =>{  
             res.status(500).send({
                 message: "Could not delete appointmentRequest with id=" + id
             });
         })
+
+        confirm = false
     
-
-
+    }
    
  
    
@@ -163,11 +162,17 @@ exports.find_appointment = (req,res)=>{
 exports.delete_appointment = (req,res)=>{
     const id = req.params.id;
 
+    let confirm = false
+    
+    if(confirm != true){
+ 
+
     Appointdb.findById(id, (error,data) =>{
         if (error){
             console.log(error)
         } else {
             const history = new Historydb({
+                _id: data._id,
                 p_name: data.p_name,
                 p_email: data.p_email,
                 p_phoneNum: data.p_phoneNum,
@@ -176,18 +181,15 @@ exports.delete_appointment = (req,res)=>{
                 p_procedure: data.p_procedure
             })
         history
-        .save(history).then(data =>{
-            if(!data){
-                res.status(404).send({message: "Not found patient history with id" + id})
-            }else{
-                console.log(data)
-                console.log(`${id}`)
-            }
-            }).catch(err =>{
-                res.status(500).send({message: "Error retrieving apatient historyt with id" + id})
-            })
+        .save(history)
+
+        confirm = true
+
         }
         })
+
+    }
+     if(confirm = true){
 
 
 
@@ -206,8 +208,10 @@ exports.delete_appointment = (req,res)=>{
                 message: "Could not delete appointment with id=" + id
             });
         })
-    
 
+        confirm = false
+    
+    }
 
    
  
