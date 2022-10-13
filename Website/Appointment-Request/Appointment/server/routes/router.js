@@ -53,7 +53,7 @@ route.get('/add-history', services2.add_history);
 route.get('/update-history', services2.update_history);
 
 route.post('/history', controller2.create);
-route.get('/history', controller2.find);
+route.get('/history-data', controller2.find);
 route.put('/history/:id', controller2.update);
 route.delete('/history/:id', controller2.delete);
 

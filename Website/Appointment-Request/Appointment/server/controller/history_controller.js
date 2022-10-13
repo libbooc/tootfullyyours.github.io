@@ -99,36 +99,7 @@ exports.update = (req,res)=>{
 
 exports.delete = (req,res)=>{
     const id = req.params.id;
-
-    Appointdb.findById(id, (error,data) =>{
-        if (error){
-            console.log(error)
-        } else {
-            const history = new Historydb({
-                p_name: data.p_name,
-                p_email: data.p_email,
-                p_phoneNum: data.p_phoneNum,
-                p_ap_date: data.p_ap_date,
-                p_ap_time: data.p_ap_time,
-                p_procedure: data.p_procedure
-            })
-        history
-        .save(history).then(data =>{
-            if(!data){
-                res.status(404).send({message: "Not found patient history with id" + id})
-            }else{
-                console.log(data)
-                console.log(`${id}`)
-            }
-            }).catch(err =>{
-                res.status(500).send({message: "Error retrieving apatient historyt with id" + id})
-            })
-        }
-        })
-
-
-
-
+ 
     Historydb.findByIdAndDelete(id)
         .then(data =>{
             if(!data){

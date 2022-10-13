@@ -1,6 +1,6 @@
 
 <!-- include header -->
-<%-include('include/_header')%>
+<%-include('include/_header-history')%>
 <!-- include header -->
 
 
@@ -9,7 +9,7 @@
     <main id="site-main">
         <div class="box-nav d-flex justify-between">
             <div class="filter">
-            <a href="/"><i class="fas fa-angle-double-left"></i>back</a>
+            <a href="/history"><i class="fas fa-angle-double-left"></i>back</a>
         </div>
     </div>
         <div class="container">
@@ -26,27 +26,38 @@
             <div class="form-group">
                 <label for="transNo" class="text-light">Transaction Number:</label>
                 <input type="hidden" name="id" value="<%=history._id%>">
-                <input type="number" name="transNo" value="<%=history.transNo%>" required>
+                <input type="number" name="transNo" value="<%=history.p_transNo%>" required>
             </div>
             <div class="form-group">
-                <label for="phdate" class="text-light">Date: </label>
-                <input type="date" name="phdate" value="<%=history.phdate %>" required>
+                <label for="p_date" class="text-light">Date: </label>
+                <input type="date" name="phdate" value="<%=history.p_date %>" required>
             </div>
         </div>
-        <div class="col-two">
+        <div class="col-three">
             <div  class="form-group">
-                <label for="toothNo" class="text-light">Tooth Number: </label>
+                <label for="toothNo" class="text-light">Tooth Number(s): </label>
                 <input type="text" name="toothNo" value="<%=history.toothNo %>" required>
             </div>
             <div  class="form-group">
                 <label for="procedure" class="text-light">Procedure: </label>
-                <input type="text" name="procedure" value="<%=history.procedure %>" required>
+                <select name="p_procedure" id="#">
+                    <option value="" disabled selected>Select your option</option>
+                    <option value="Fillings">Fillings</option>
+                    <option value="Root Canal">Root Canal</option>
+                    <option value="Consultation">Consultation</option>
+                    <option value="Fixing Bridge">Fixing Bridge</option>
+                    <option value="Dental Implant">Dental Implant</option>
+                    <option value="Dental Crown">Dental Crown</option>
+                    <option value="X-Ray">X-Ray</option>
+                    <option value="Teeth Whitening"> Teeth Whitening</option>
+                    <option value="Dental Brace">Dental Brace</option>
+                    <option value="Tooth Extraction">Tooth Extraction</option>
+                    <option value="Scaling">Scaling</option>						
+                    <option value="Others">Others</option>
+                </select>
             </div>
-        
-        </div>
-        <div class="col-one">
             <div  class="form-group">
-                <label for="payments" class="text-light">Payments</label>
+                <label for="payments" class="text-light">Amount:</label>
                 <input type="number" name="payments" value="<%=history.payments %>" required>
             </div>
         </div> 

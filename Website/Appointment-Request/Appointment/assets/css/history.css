@@ -7,6 +7,7 @@
     --search-barbg: #C2F4F2;
     --gray: #ACAFBA;
     --table-thead: #CBE5E4;
+
 }
 
 *{
@@ -20,7 +21,7 @@
 }
 
 body{
-    background-color: var(--containerbg);
+    background-color: var(--bodybg)
 }
 
 a{
@@ -235,8 +236,7 @@ nav ul li a:hover:after{
     width: 80%;
     background-color: var(--containerbg);
     margin: 0 auto;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-}
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;}
 
 .table-history-header{
     padding: 1rem;
@@ -337,7 +337,8 @@ nav ul li a:hover:after{
     border: none;
     padding: 2rem;
     width: 100%;
-    background-color: var(--table-thead);
+    height: 30rem;
+    background-color: var(--containerbg);
     margin-top: 1rem;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
    
@@ -351,6 +352,11 @@ nav ul li a:hover:after{
     grid-template-columns: 1fr 1fr;
 }
 
+.col-three{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 .form-group{
     display: flex;
     margin: 0 1rem;
@@ -360,7 +366,7 @@ nav ul li a:hover:after{
 }
 
 .form-group input[type=number], .form-group input[type=text],
-.form-group input[type=date] {
+.form-group input[type=date], .form-group select {
     border: 1px solid var(--navbg);
     padding: .45rem;
     border-radius: 10px;

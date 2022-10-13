@@ -10,10 +10,10 @@ route.get('/', services.homeRoutes);
 route.get('/add-history', services.add_history);
 route.get('/update-history', services.update_history);
 
-route.post('/history', controller.create);
-route.get('/history', controller.find);
-route.put('/history/:id', controller.update);
-route.delete('/history/:id', controller.delete);
+route.post('/api/history', controller.create);
+route.get('/api/history', controller.find);
+route.put('/api/history/:id', controller.update);
+route.delete('/api/history/:id', controller.delete);
 
 
 module.exports = route
